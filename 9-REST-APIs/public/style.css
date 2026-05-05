@@ -1,0 +1,54 @@
+/* fixed - simple clean UI */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+.post {
+    background: white;
+    padding: 15px;
+    margin: 15px auto;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.user {
+    color: #333;
+}
+
+.content {
+    color: #555;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+    margin-right: 10px;
+}
+
+button {
+    padding: 6px 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form {
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}

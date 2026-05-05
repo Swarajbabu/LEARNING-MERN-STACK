@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET & Post REQUEST</title>
+</head>
+<body>
+
+    <!-- This is a simple GET request form -->
+    <!-- By default, a form uses the GET method -->
+    <h2>Get Request Form</h2>
+    <form method="get" action="http://localhost:8080/register">
+        <input type="text" placeholder="Username" name="Username">
+        <input type="password" placeholder="password" name="password">
+        <button>Submit</button>
+    </form>
+    
+    <hr>
+    
+    <h2>Post Request Form</h2>
+    <form method="post" action="http://localhost:8080/register">
+        <input type="text" placeholder="Username" name="Username">
+        <input type="password" placeholder="password" name="password">
+        <button>Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body> 
+</html>
