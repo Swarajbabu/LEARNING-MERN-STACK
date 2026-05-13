@@ -1,9 +1,8 @@
 const express = require('express');
 const app = express();
 const path = require("path")
-const { v4: uuidv4 } = require("uuid");
-const methodOverride = require("method-override");
-app.use(methodOverride("_method"));
+const { v4: uuidv4 } = require("uuid");                             // this is used to generate unique id for each post. we can use any other library or we can also use the built-in crypto module in node.js to generate unique id. but uuid is a popular library for generating unique id and it is easy to use.
+const methodOverride = require("method-override");                     // this is used to override the method of the form from post to patch or delete. because in html form we can only use get and post method but we want to use patch and delete method for updating and deleting the post. so we can use method-override to override the method of the form.
 
 
 const port = 8080;
@@ -12,7 +11,8 @@ app.set("views", path.join(__dirname, "/views"));                    // this is 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "/public")))             // this is used to set the public folder as the default folder for serving the static files like css, js, images etc. if we don't set this then we have to give the path of the static files in the html file. but if we set this then we can directly give the name of the static files in the html file.
 app.use(express.urlencoded({ extended: true }));                   // this is used to parse the form data from the request body. if we don't use this then we can't access the form data in the request body. this is a built-in middleware in express that parses incoming requests with urlencoded payloads and is based on body-parser. the extended option allows to choose between parsing the URL-encoded data with the querystring library (when false) or the qs library (when true). the qs library allows for rich objects and arrays to be encoded into the URL-encoded format, allowing for a JSON-like experience with URL-encoded. when extended is false, you can only parse simple key-value pairs, which may not be sufficient for complex data structures.
-app.use(express.json());
+app.use(express.json());                                            // this is used to parse the json data from the request body. if we don't use this then we can't access the json data in the request body. this is a built-in middleware in express that parses incoming requests with JSON payloads and is based on body-parser. it will only parse the request if the content-type header is set to application/json. after parsing the json data, it will be available in the req.body object.
+app.use(methodOverride("_method"));                                 // this is used to override the method of the form from post to patch or delete. because in html form we can only use get and post method but we want to use patch and delete method for updating and deleting the post. so we can use method-override to override the method of the form. we have to give the name of the query parameter in the form action url that we want to use for overriding the method. in this case we are using _method as the query parameter name. so in the form action url we have to add ?_method=patch or ?_method=delete to override the method to patch or delete respectively.
 
 app.listen(port, () => {
     console.log(`Server is Started in: ${port}`);
