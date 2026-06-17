@@ -1,0 +1,58 @@
+
+
+MongoDB Notes
+
+Show all databases
+
+db;                                                         // Explanation: Shows the current database in use.
+Expected Output: test
+
+Switch/Create a database
+use college;                                                //Explanation: Switches to the ‘college’ database. If it doesn’t exist,
+                                                            //MongoDB creates it when data is inserted.
+                                                            //Expected Output: switched to db college
+
+Insert one document
+db.student.insertOne({                                      //Explanation: Inserts one document into the student collection.
+    name: “Swaraj”,                                         //Expected Output: { acknowledged: true, insertedId: ObjectId(“…”) }
+    age: 19, 
+    marks: 88 
+});
+
+                            
+
+Find all documents
+Command: db.student.find()                                  //Explanation: Displays all documents inside student collection.
+
+                                                            //Expected Output: [ { _id: ObjectId(“…”), name: “Swaraj”, age: 19, marks:88 }]
+
+
+
+Find formatted data
+Command: db.student.find().pretty()                         //Explanation: Displays data in readable format.
+
+
+Insert multiple documents
+Command: db.student.insertMany([ {name:“Ram”, age:20, marks:90},{name:“John”, age:21, marks:85}]);
+
+                                                            //Expected Output: { acknowledged:true, insertedIds:{…} }
+
+Find with condition
+Command: db.student.find({marks:90})                        //Expected Output: { name:“Ram”, age:20, marks:90 }
+
+
+Update one document
+Command: db.student.updateOne( {name:“Ram”}, {$set:{marks:95}} );      
+                                                            //Expected Output: { acknowledged:true, matchedCount:1, modifiedCount:1 }
+
+Delete one document
+Command: db.student.deleteOne({name:“Ram”})                 //Expected Output: { acknowledged:true, deletedCount:1 }
+
+Delete all documents
+Command: db.student.deleteMany({})                          //Expected Output: { acknowledged:true, deletedCount:n }
+
+Drop collection
+Command: db.student.drop()                                  //Expected Output: true
+
+Drop database
+Command: db.dropDatabase()                                  //Expected Output: { ok:1 }
