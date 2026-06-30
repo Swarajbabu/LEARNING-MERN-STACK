@@ -1,0 +1,172 @@
+/* .container{
+    display: grid;
+    grid-template-areas: "one two three"
+                         "four five six"
+                         "seven nine nine"; */
+    /* grid-template-columns defines the number and size of columns */
+    /* fraction lets colums get equal share of the available space. */
+    /* grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 200px 300px;
+    gap: 20px; */
+    /* row-gap: 50px;
+    column-gap: 30px; */
+/* } */
+/* .items{
+    background-color: orangered;
+    color: white;
+    font-size: large;
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+} */
+
+/* #item3{
+    grid-area: nine;
+    background-color: cadetblue;
+} */
+
+/* #item1{
+    grid-row: 3/4;
+    grid-column: 3/4;
+    background-color: brown;
+
+}
+#item6{
+    grid-column: 1/2;
+    background-color: aqua;
+    
+}
+#item4{
+    grid-column: 2/4;
+    background-color: aqua;
+    
+} */
+
+/* *{
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#layout{
+    display: grid;
+    grid-template-areas: "header header header header"
+                         "sidebar contents contents contents"
+                         "footer footer footer footer";
+    height: 100vh;
+    width: 100vw;
+}
+header{
+    background-color: blueviolet;
+    grid-area: header;
+    height: 10vh;
+    text-align: center;
+    transition: background-color 0.1s ease-out;
+    &&:hover{
+        
+        background-color: rgb(93, 12, 168);
+    }
+    
+}
+footer{
+    background-color: chocolate;
+    grid-area: footer;
+    height: 10vh;
+    text-align: center;
+    transition: background-color 0.1s ease-out;
+    &&:hover{
+        
+        background-color: rgb(151, 85, 38);
+    }
+}
+#sidebar{
+    background-color: chartreuse;
+    grid-area: sidebar;
+    height: 80vh;
+    width: 20vw;
+    transition: background-color 0.1s ease-out;
+    &&:hover{
+        
+        background-color: rgb(108, 181, 36);
+    }
+}
+#content{
+    background-color: cadetblue;
+    grid-area: contents;
+    height: 80vh;
+    width: 80vw;
+    transition: background-color 0.1s ease-out;
+    &&:hover{
+        
+        background-color: rgb(43, 107, 109);
+    }
+
+} */
+ *{
+    margin: 0;
+    padding: 0;
+ }
+ .container{
+    background-color: cadetblue;
+    height: 60vh;
+    width: 90vw;
+    position: relative;
+ }
+
+ #ball{
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(red, purple, blue);
+    border: 1px groove purple;
+    border-radius: 100%;
+    animation: bounceX 5s linear alternate infinite, bounceY 1s ease-out alternate infinite;
+ }
+ @keyframes bounceX {
+    from{
+        left: 0;
+    }
+    to{
+        left: 92.5%;
+    }
+ }
+ @keyframes bounceY {
+    from{
+        bottom: 0;
+    }
+    to{
+        bottom: 80%;
+    }
+ }
+
+ .box{
+    width: 100px;
+    height: 100px;
+    position: absolute; 
+    /* Z-Index will only work if the position property is set to absolute, relative, fixed, sticky*/
+    bottom: 50px;
+    left: 90px;
+
+ }
+ #box1{
+    background-color: coral;
+    z-index: 2;
+ }
+ #box2{
+    background-color: green;
+    z-index: 9;
+ }
+ #box3{
+    background-color: orange;
+    z-index: 5;
+ }
+ #box4{
+    background-color: red;
+    z-index: 1;
+ }
+ #box5{
+    background-color: blueviolet;
+    z-index: 4;
+ }

@@ -1,0 +1,56 @@
+.box{
+    /* box-sizing: content-box;  The specified height and width only applies to the content */
+    /* width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    color: white; */
+    /* border: 10px solid black; */
+    /* outline: 10px solid black;
+    padding: 20px;
+    margin: 30px; */
+
+    /* 200 + 10 + 20 = 230px */
+    /* the width includes content, padding, and border */
+    /* box-sizing: border-box; */
+
+    /* padding: 20px 50px 70px 10px; */
+    /* border: 10px solid black; */
+    /* border-width: 10px 20px 30px 40px; */
+    /* border-left: 50px;
+    border-bottom: 30px;
+    border-style: groove;
+    border-color: black; */
+    /* margin: 10px; */
+    /* margin-bottom: 30px;
+    margin-top: 20px; */
+    /* margin: 10px 20px 30px 40px;
+    border-radius: 20px 50px; */
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#navbar{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    list-style: none;
+    background-color: steelblue;
+    color: white;
+    height: 50px;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.items{
+    transition: background-color 0.1s ease-out;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &&:hover{
+        background-color: rgb(21, 79, 126);
+    }
+}
