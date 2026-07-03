@@ -4,10 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <style>
+        .container{
+            height: 300px;
+            width: 500px;
+            text-align: center;
+            border: 2px groove rgb(44, 1, 85);
+            background-color: blueviolet;
+            border-radius: 15px;
+            transition: background-color 0.1s ease-out;
+            &&:hover{
+                background-color: rgb(91, 8, 168);
+            }
+        }
+        #postTitle, #postId, #postBody{
+            color: white;
+            transition: color 0.1s ease-out;
+            &&:hover{
+                color: rgb(44, 1, 85);
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hi this is Swaraj</h1>
+    <div class="container">
+        <h1 id="postTitle"></h1>
+        <div id="postId"></div>
+        <div id="postBody"></div>
+    </div>
 </body>
 <script src="script.js"></script>
 </html>
