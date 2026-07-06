@@ -13,12 +13,14 @@
 // Show all databases
 // Why: Lists available databases
 // Where: Check existing databases
-show dbs
+
+// show dbs
 
 // Create/Switch database
 // Why: Creates database if not exists
 // Where: Start working with a database
-use college
+
+// use college
 
 // Show current database
 // Why: Check active database
@@ -28,6 +30,7 @@ db
 // Delete current database
 // Why: Remove entire database
 // Where: Reset project/testing
+
 db.dropDatabase()
 
 /**********************************************************************
@@ -42,7 +45,8 @@ db.createCollection("students")
 // Show collections
 // Why: View all collections
 // Where: Check database structure
-show collections
+
+// show collections
 
 // Drop collection
 // Why: Delete collection permanently

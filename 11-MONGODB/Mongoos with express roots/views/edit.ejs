@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        form {
+            width: 300px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+        }
+
+        button {
+            padding: 8px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Edit By Id: <%= data._id %>
+    </h2>
+    <form action="/chats/<%= data._id %>?method=PUT" method="post">
+        <textarea name="msg" id="msg"> <%= data.msg %> </textarea>
+        <br>
+        <button>Edit</button>
+    </form>
+</body>
+
+</html>

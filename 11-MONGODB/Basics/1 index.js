@@ -83,9 +83,9 @@ User.insertMany([
 
 // findOneAndUpdate data in the collection or database
 
-// User.findOneAndUpdate({name: "Raj"},{age: 18}).then((res)=>{
-//     console.log(res);
-// })
+User.findOneAndUpdate({name: "Raj"},{age: 18}).then((res)=>{
+    console.log(res);
+})
 
 // User.findOneAndUpdate({name: "Raj"},{age: 99},{new: true}).then((res)=>{
 //     console.log(res);
