@@ -31,7 +31,7 @@
 <body>
     <h2>Edit By Id: <%= data._id %>
     </h2>
-    <form action="/chats/<%= data._id %>?method=PUT" method="post">
+    <form action="/chats/<%= data._id %>?_method=PUT" method="post">
         <textarea name="msg" id="msg"> <%= data.msg %> </textarea>
         <br>
         <button>Edit</button>
