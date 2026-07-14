@@ -30,22 +30,23 @@ const findCustmer = async () => {
 }
 findCustmer();
 
+const addcustmer = async ()=>{
+    let newCust = new Custmer({
+        name: "Swaraj"
+    });
 
-// const addcustmer = async ()=>{
-//     let cust1 = new Custmer({
-//         name: "Rahul Kumar"
-//     });
+    let newOrder = new Order({
+        item: "pizza",
+        price: 250,
+    });
 
-//     let order1 = await Order.findOne({item: "Chips"});
-//     let order2 = await Order.findOne({item: "Chocolate"});
-
-//     cust1.orders.push(order1)
-//     cust1.orders.push(order2)
-
-//     let result = await cust1.save();
-//     console.log(result);
-// }
-// addcustmer();
+    newCust.orders.push(newOrder);
+    
+    await newCust.save();
+    await newOrder.save();
+    console.log("Added");
+}
+addcustmer();
 
 
 // const addOrders = async ()=>{
