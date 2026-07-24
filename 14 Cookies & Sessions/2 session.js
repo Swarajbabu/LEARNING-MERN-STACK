@@ -14,7 +14,7 @@ app.get("/test",(req,res)=>{
         req.session.count++;
     }else{
         req.session.count = 1
-    }
+    } 
     res.send(`Number of request send by the user: ${req.session.count}`);
 });
 
