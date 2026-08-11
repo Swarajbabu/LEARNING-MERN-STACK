@@ -1,7 +1,7 @@
 import './App.css'
-import { Product } from './Product'
+import { TextBox } from './TextBox'
 import { ProductTab } from './ProductTab'
-import { Title, Sum } from './Title'
+// import { Title, Sum } from './Title'
 
 function App() {
   const buttonSubmit = () => {
@@ -13,6 +13,7 @@ function App() {
       <button onClick={buttonSubmit} >Submit</button>
       {/* <Title /> */}
       {/* <Sum /> */}
+      <TextBox name = "Swaraj" colour = "Green"/>
       <ProductTab/>
     </div>
   )

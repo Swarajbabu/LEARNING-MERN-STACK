@@ -8,11 +8,12 @@ export const ProductTab = () => {
     <li key="b"> good </li>,
     <li key="c"> babu </li>,
   ];
+
   return (
-    <>
+    <div>
       <Product title="Phone" price={1000} options={arr} options1={arr2} />
       <Product title="Laptop" price={5000} options2={arr3} />
-      <Product title="Pen" />
-    </>
+      <Product title="Pen" price={50} />
+    </div>
   );
 };
