@@ -1,10 +1,12 @@
-import Button from './Button'
+// import Button from './Button'
 import './App.css'
+import Form from './form'
 
 function App() {
   return (
     <>
-      <Button />
+      <Form/>
+      {/* <Button /> */}
     </>
   )
 }
