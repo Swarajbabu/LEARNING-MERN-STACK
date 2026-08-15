@@ -12,6 +12,10 @@ export const Counter = () => {
             <button onClick={incCount}>Increase Count</button>
         </>
     );
+    
 };
+
+
+
 
 
