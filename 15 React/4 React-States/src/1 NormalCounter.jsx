@@ -1,9 +1,9 @@
-export const Counter = () => {
-    let count = 0;
+let count = 0;
 
+export const Counter = () => {
     function incCount() {
         count += 1;
-        console.log(count);
+        console.log("Count in console:", count);
     }
 
     return (
