@@ -1,0 +1,10 @@
+.Product{
+    border: 1px solid wheat;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 0 10px 0 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}

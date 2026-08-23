@@ -1,0 +1,19 @@
+.ProductTab {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px auto;
+}
+
+.Product {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
