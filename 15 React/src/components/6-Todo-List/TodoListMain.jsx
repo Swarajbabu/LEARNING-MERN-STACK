@@ -1,9 +1,9 @@
 import React from "react";
-
+import Todulist from "./Todulist";
 function TodoListMain() {
   return (
     <>
-        <h1>TodoList</h1>
+        <Todulist/>
     </>
   );
 }
